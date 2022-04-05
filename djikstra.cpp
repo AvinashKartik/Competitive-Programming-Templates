@@ -30,12 +30,12 @@ void dijkstra(graph &g, int s = 1) {
     while (!q.empty()) {
         int v = q.begin()->second;
         q.erase(q.begin());
-        for (auto i : g.adj[v]){
+        for (auto i : g.adj[v]) {
             int to = g.v[i];
             long long len = g.w[i];
             if (d[v] + len < d[to]) {
                 q.erase({d[to], to});
-            	d[to] = d[v] + len;
+                d[to] = d[v] + len;
                 p[to] = v;
                 q.insert({d[to], to});
             }
@@ -43,5 +43,11 @@ void dijkstra(graph &g, int s = 1) {
     }
 }
 
-int main(){
+int main() {
+    int n;
+    cin >> n;
+    // no of nodes
+    graph g(n);
+    // graph, root
+    dijkstra(g, n, 1);
 }

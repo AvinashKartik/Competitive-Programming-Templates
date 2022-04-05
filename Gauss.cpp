@@ -41,6 +41,9 @@ struct gauss {
 	}
 };
 
-int main(){
-
+int main() {
+	int b;
+	cin >> b;
+	// no of bits
+	gauss g(b);
 }

@@ -19,5 +19,9 @@ struct graph {
     }
 };
 
-int main(){
+int main() {
+    int n;
+    cin >> n;
+    // no of nodes
+    graph g(n);
 }

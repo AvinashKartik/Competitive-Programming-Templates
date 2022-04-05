@@ -2,9 +2,9 @@
 
 using namespace std;
 
-#define  f              first                 
+#define  f              first
 #define  s              second
-#define  pb             push_back  
+#define  pb             push_back
 #define  mset(a,x)      memset(a,x,sizeof(a))
 #define  debv(a)        for(auto it: a)cout<<it<<" ";cout<<endl;
 #define  deb1(a)        cout<<a<<endl;
@@ -16,19 +16,20 @@ using namespace std;
 
 typedef  long long             ll;
 typedef  long double           ld;
- 
+
 const ll   N     =  2e5 + 5;
 const ll   mod   =  1e9 + 7;
 const ll   INF   =  0x7f7f7f7f7f7f7f7f;
 const int  INFi  =  0x7f7f7f7f;
 
-void solve(){
+void solve() {
+	
 }
 
-int main(){
+int main() {
 	int test = 1;
 	//cin >> test;
-	for(int i = 1; i <= test; i++){
+	for (int i = 1; i <= test; i++) {
 		solve();
 	}
 }

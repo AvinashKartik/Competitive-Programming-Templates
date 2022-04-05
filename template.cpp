@@ -25,6 +25,7 @@ const ll   INF   =  0x7f7f7f7f7f7f7f7f;
 const int  INFi  =  0x7f7f7f7f;
 
 void solve() {
+	
 }
 
 int main() {

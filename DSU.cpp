@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
- 
+
 using namespace std;
 
 struct union_find {
 	int n, components;
 	vector <int> p, sz;
 
-	union_find() : n(), components() {}
-
+	union_find() {}
 	union_find(int n) : n(n), components(n) {
 		p.assign(n + 1, 0);
 		iota(p.begin(), p.end(), 0);
@@ -30,5 +29,9 @@ struct union_find {
 	}
 };
 
-int main(){
+int main() {
+	int n;
+	cin >> n;
+	// no of nodes
+	union_find dsu(n);
 }

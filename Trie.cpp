@@ -8,6 +8,7 @@ struct bitwise_trie {
 	stack <int> s;
 	vector <T> trie;
 
+	bitwise_trie() {}
 	bitwise_trie(int n, int b) : n(n), b(b) {
 		for (int i = n - 1; i >= 1; i--) s.push(i);
 		trie.resize(n);
@@ -41,7 +42,7 @@ struct bitwise_trie {
 		}
 		trie[v].cnt--;
 	}
-	
+
 	int min_xor(int x, int f = 0) {
 		int v = 0, ans = 0;
 		for (int i = b; i >= 0; i--) {
@@ -56,7 +57,7 @@ struct bitwise_trie {
 		}
 		return ans;
 	}
-	
+
 	int max_xor(int x) {
 		return min_xor(x, 1);
 	}
@@ -68,5 +69,8 @@ struct node {
 };
 
 int main() {
-    bitwise_trie <node> t(32 * 2000 * 100, 30);
+	int n;
+	cin >> n;
+	// (no of bits + 1) * n, no. of bits
+	bitwise_trie <node> t(31 * n, 30);
 }

@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
- 
+
 using namespace std;
 
 template<int N>
 struct sieve {
     vector <int> primes;
-    array <int, N + 1> spf;
+    array < int, N + 1 > spf;
 
     sieve() : spf() {
         for (int i = 2; i * i <= N; i++) {
@@ -56,9 +56,10 @@ struct sieve {
     }
 };
 
+// maximum value
 sieve <1000 * 1000> s;
 
-int main(){
+int main() {
     cout << "Hello World\n";
     return 0;
 }

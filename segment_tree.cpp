@@ -9,7 +9,7 @@ struct segment_tree {
 	T e;
 	F f;
 
-	segment_tree() : n(), e(), f() {}
+	segment_tree() {}
 
 	template<typename U>
 	segment_tree(const std::vector<U> &v, int n, T e, F &&f): n(n), tree(4 * n), e(e), f(f) {
@@ -70,9 +70,10 @@ struct node {
 };
 
 int main() {
-    int n;
-    cin >> n;
-	segment_tree<node> st(vector <int> (n + 1, 0), n, node(), [&](const node &a, const node &b){
+	int n;
+	cin >> n;
+	// vector of values(1 indexed), no of values, identity element of the function, function
+	segment_tree<node> st(vector <int> (n + 1, 0), n, node(), [&](const node & a, const node & b) {
 		node c;
 		c.val = a.val + b.val;
 		return c;

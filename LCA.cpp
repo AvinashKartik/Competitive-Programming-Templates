@@ -25,8 +25,8 @@ struct ancestors {
     graph g;
     vector <int> p, d;
 
-    ancestors() : n() {}
-    ancestors(int n, graph &g, int r) : n(n), g(g), root(r) {
+    ancestors() {}
+    ancestors(graph &g, int r) : n(g.n), g(g), root(r) {
         level = log2(n) + 1;
         st.assign(n + 1, vector <int> (level, -1));
         p.assign(n + 1, 0);
@@ -53,9 +53,9 @@ struct ancestors {
         }
     }
 
-    int kth(int x, int k){
-        for (int i = level - 1; i >= 0; i--){
-            if (k >= (1 << i)){
+    int kth(int x, int k) {
+        for (int i = level - 1; i >= 0; i--) {
+            if (k >= (1 << i)) {
                 x = st[x][i];
                 k -= (1 << i);
             }
@@ -77,10 +77,16 @@ struct ancestors {
         return st[x][0];
     }
 
-    int distance(int u, int v){
-	    return d[u] + d[v] - 2 * d[lca(u, v)];
+    int distance(int u, int v) {
+        return d[u] + d[v] - 2 * d[lca(u, v)];
     }
 };
 
-int main(){
+int main() {
+    int n;
+    cin >> n;
+    // no of nodes
+    graph g(n);
+    // graph, root
+    ancestors lca(g, 1);
 }

@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
- 
+
 using namespace std;
 
 template<int N>
 struct math {
 	vector <int> primes;
-	array <int, N + 1> spf, mu;
+	array < int, N + 1 > spf, mu;
 
 	math() : spf() {
 		for (int i = 2; i * i <= N; i++) {
@@ -77,9 +77,10 @@ struct math {
 	}
 };
 
+// maximum value
 math <1000 * 1000> s;
 
-int main(){
-    cout << "Hello World\n";
-    return 0;
+int main() {
+	cout << "Hello World\n";
+	return 0;
 }
